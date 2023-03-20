@@ -21,32 +21,197 @@
 
   <title>Destinations</title>
   <style>
-    .login {
-    background-color:#599bb3;
-    border-radius:8px;
-    display:inline-block;
-    cursor:pointer;
-    color:#ffffff;
-    font-family:Arial;
-    font-size:20px;
-    font-weight:bold;
-    padding:2px 10px;
-      margin-right: 5px;
-    text-decoration:none;
-  }
-  .login:hover {
-    background-color:#c9e4eebe;;
-  }
-  .login:active {
-    position:relative;
-    top:1px;
-  }
-  .container-fluid {
-      background-image: linear-gradient(to right, #7B1FA2, #E91E63)
-  }
-  </style>
-</head>
+      body {font-family: Arial, Helvetica, sans-serif;}
 
+/* Full-width input fields */ 
+input[type=text], input[type=password], input[type=Date],input[type=email]{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+form button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+img.avatar {
+  width: 10%;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 30%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+   display: block;
+   float: none;
+ }
+ .cancelbtn {
+   width: 100%;
+ }
+}
+</style>
+
+<script>
+      // Get the modal
+      var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+function myFunction() {
+  var x = document.getElementById("myInput");
+  if (x.type == "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+} 
+function validation1(){
+  var username=document.getElementById("uname").value;  ///get id with value 
+  var usernamepattern=/^[A-Za-z .]{3,15}$/;   ////Regular expression for username size(3-15)
+  var pass=document.getElementById("myInput").value
+  var passpattern=/^[A-Za-z0-9]\w{8,}$/;
+  if((usernamepattern.test(username))&&(passpattern.test(pass)))
+  { 
+    alert("Login Success")
+  }
+  else{
+   alert("Invalid Credentials. Username must contain more then 3 charachters and Passsword must contain a-z, A-Z ,number and length should be more than 8 chars.")
+ }
+}
+
+function val2() {
+  var name1=document.getElementById("nm1").value
+  if(name1.length < 5){
+    alert("Please Enter valid Name")
+    return false;
+  }
+
+  // email validation
+  var email =  document.getElementById('email').value;
+    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    if(!re.test(email)){
+      alert("Email format is invalid")
+      return false;
+      document.getElementById('email').focus()
+
+}
+
+  alert("Login Success")
+  return true
+   
+}
+
+
+
+var modal = document.getElementById('id02');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+
+</script>
+
+</head>
 
 <body>
   <!-- navbar -->
@@ -59,7 +224,7 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="newhome.html">Home</a>
+            <a class="nav-link" aria-current="page" href="homepage.html">Home</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -78,20 +243,90 @@
             <a class="nav-link" href="contact.html">Contact Us</a>
           </li>
         </ul>
-         <!-- sign in -->
-          
-    <a href="homepage.html" class="login">Sign out</a>
-    <!-- sign in end -->
+        <button type="button" class="btn btn-danger m-1" onclick="document.getElementById('id01').style.display='block'">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+              <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+            </svg>
+            Sign In
+        </button>
+        <div id="id01" class="modal" >
 
+            <form class="modal-content animate" method="post">
+              <div class="imgcontainer">
+                <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                <img src="img_avatar1.png" alt="Avatar" class="avatar">
+              </div>
+
+              <div class="container">
+                <label for="uname"><b>Username</b></label>
+                <input type="text" placeholder="Enter Username" name="uname" id="uname" required>
+
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" id="myInput" required>
+                <label>
+                  <input type="checkbox" name="remember" id="myPass" onclick="myFunction()"> Show Password
+                </label>
+
+                <button type="submit" class="bg-info" onclick="validation1()">Login</button>
+
+              </div>
+
+              <div class="container" style="background-color:#f1f1f1">
+                <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn bg-danger">Cancel</button>
+              </div>
+            </form>
+          </div>
+
+        <button type="button" class="btn btn-danger m-1" onclick="document.getElementById('id02').style.display='block'">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+              <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+            </svg>
+            Sign Up
+        </button>
+        <div id="id02" class="modal" >
+
+            <form class="modal-content animate" method="post">
+              <div class="imgcontainer">
+                <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+                <img src="img_avatar1.png" alt="Avatar" class="avatar">
+              </div>
+
+              <div class="container">
+                <label for="name"><b>Name</b></label>
+                <input type="text" placeholder="Enter Username" id="nm1" required>
+
+                <label for="uname"><b>Email</b></label>
+                <input type="Email" placeholder="Enter Username" id="email" required>
+
+                <label id="txtdate"><b>DOB</b></label>
+                <input type="Date" required>
+
+                <label for="wpass"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password"  id="txtPassword" name="psw"  required pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$">
+
+                <label for="psw"><b>Confirm Password</b></label>
+                <input type="password" placeholder="Enter Password" id="txtConfirmPassword"  name="psw"  required>
+
+
+                <button type="submit" class="bg-info" id="btnSignup" onclick="val2()">SignUp</button>
+
+              </div>
+
+              <div class="container" style="background-color:#f1f1f1">
+                <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn bg-danger">Cancel</button>
+              </div>
+            </form>
+          </div>
+      </div>
+    </div>
   </nav><br><br><br>
 
   <!--Actual-->
-  <div>
+  <div class="container-fluid">
     <div class="alert alert-info" role="alert" align="center"><h2>
       We Provide You Cruises,To...
     </h2></div></div>
     <!--Info Cards-->
-    <div class="container-fluid">
     <div class="container my-4">
       <div class="row mb-2">
         <div class="col-md-6">
@@ -301,7 +536,7 @@
       <!-- Copyright -->
       <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
         © 2021 Copyright:
-        <a class="text-white" href="https://mdbootstrap.com/">dolphincruise.in</a>
+        <a class="text-white" href="#">dolphincruise.in</a>
       </div>
       <!-- Copyright -->
     </footer>

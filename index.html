@@ -1,24 +1,17 @@
 <!doctype html>
   <html lang="en">
-
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- External CSS for review -->
+    <link rel="stylesheet" type="text/css" href="review.css">
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <!-- Optional JavaScript; choose one of the two! -->
 
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
-  -->
-  <style>
+    <title>Dolphin Cruise</title>
+    <style>
       body {font-family: Arial, Helvetica, sans-serif;}
 
 /* Full-width input fields */ 
@@ -182,17 +175,17 @@ function val2() {
 
   // email validation
   var email =  document.getElementById('email').value;
-    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    if(!re.test(email)){
-      alert("Email format is invalid")
-      return false;
-      document.getElementById('email').focus()
+  var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  if(!re.test(email)){
+    alert("Email format is invalid")
+    return false;
+    document.getElementById('email').focus()
 
-}
+  }
 
   alert("Login Success")
   return true
-   
+  
 }
 
 
@@ -209,41 +202,58 @@ window.onclick = function(event) {
 
 </script>
 
-  <body>
-    <!-- navbar -->
-    <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
-      <div class="container-fluid">
-        <label class="navbar-brand">Dolphin Cruise</label>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="homepage.html">Home</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Features
-              </a>
-              <ul class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item text-info" href="activity.html">Activity</a></li>
-                <li><a class="dropdown-item text-info" href="bar.html">Bar</a></li>
-                <li><a class="dropdown-item text-info" href="entertainment.html">Entertainment</a></li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" href="#">Destinations</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contact Us</a>
-            </li>
-          </ul>
-          <button type="button" class="btn btn-danger m-1" onclick="document.getElementById('id01').style.display='block'">
+</head>
+
+<body>
+  <!-- Optional JavaScript; choose one of the two! -->
+
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+  <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+  -->
+
+  <!-- navbar -->
+  <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
+    <div class="container-fluid">
+      <label class="navbar-brand">Dolphin Cruise</label>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Features
+            </a>
+            <ul class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item text-info" href="activity.html">Activity</a></li>
+              <li><a class="dropdown-item text-info" href="bar.html">Bar</a></li>
+              <li><a class="dropdown-item text-info" href="entertainment.html">Entertainment</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="destination.html">Destinations</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact Us</a>
+          </li>
+        </ul>
+
+        <!-- sign in -->
+        <button type="button" class="btn btn-danger m-1" onclick="document.getElementById('id01').style.display='block'">
+          <!-- <a href="signin.html" class="text-decoration-none text-light"> -->
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
               <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
             </svg>
             Sign In
+            <!-- </a> -->
           </button>
           <div id="id01" class="modal" >
 
@@ -272,7 +282,9 @@ window.onclick = function(event) {
               </div>
             </form>
           </div>
+          <!-- sign in end -->
 
+          <!-- sign up -->
           <button type="button" class="btn btn-danger m-1" onclick="document.getElementById('id02').style.display='block'">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
               <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
@@ -313,92 +325,197 @@ window.onclick = function(event) {
               </div>
             </form>
           </div>
+          <!-- sign up end -->
+
         </div>
       </div>
-    </nav><br><br><br>
+    </nav>
+    <!-- navbar end -->
 
-    <!--program start-->
-    <div class="alert alert-info" role="alert" align="center"><h2>
-      Thailand
+    <!-- slider -->
+    <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="slider3.png" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="slider1.png" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="slider2.png" class="d-block w-100" alt="...">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
     </div>
-    <br>
+    <!-- slider end -->
 
+    <!-- cards -->
+    <div class="container mt-4">
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+          <div class="card h-100">
+            <img src="card1.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Activities</h5>
+              <p class="card-text">Come get your cruise on to get your game on. These ships have taken onboard activities to new heights. Get in the fast lane on a thrilling race track, or hang on the largest ropes course at sea. Then slow it down, way down, with a hot stone massage at Mandara Spa. Whether you're setting sail with friends, enjoying a romantic retreat or bringing the whole family along, the smiles come in all sizes with incredible experiences for all ages.</p>
+              <a href="#"><i>Know More</i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card h-100">
+            <img src="card2.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Entertainment</h5>
+              <p class="card-text">When it comes to the award-winning entertainment onboard our ships, you won't believe your eyes or even your ears.
+              Acrobats soar while jaws drop during the dazzling performances. It's showtime - on all our ships.</p>
+              <a href="#"><i>Know More</i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card h-100">
+            <img src="card3.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Bar</h5>
+              <p class="card-text">Our ships feature up to 22 bars and lounges, each with its own unique vibe. Dance to the ultraviolet energy at Bliss Ultra Lounge. Sip champagne, sake or scotch. Lounge poolside with an umbrella drink. Play pool at the pub. Or chill at the Ice Bar. Follow your mood and mingle.</p>
+              <a href="#"><i>Know More</i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- cards end -->
+
+    <!-- about -->
     <div class="container-fluid">
-      <div class="row">
-        <div class="col-xl-6 col-lg-6 col-md-6" style="border:0px solid #ddd">
-          <img src="thai1.jpeg" alt="responsive webite" class="img-fluid" height="500" width="800">
-        </div>
-        <div class="col-xl-6 col-lg-6 col-md-6" style="border:0px solid #ddd">
-          <br>
-          <br>
-          <br>
-          <h2>Beauty Personified</h2>
-          <p>Coming to Thailand means coming to the places that has all the charm and all the heat within it. Almost all the places in Thailand are beautiful and therefore it is said that the whole country is beauty personified and this is one of the best places to see in Thailand. So, among every other beautiful city that Thailand has, Phuket is the most popular one. This is the most visited place in Thailand. Phuket is known for the incredible night life that it offers to its tourists. You could also go bungee jumping in Thailand and scuba diving in Phuket for adrenaline boost. 1-2 days are not enough for anyone to have a complete tour of this beautiful place. If you are coming to this place then you will have to come with a full proof plan and a list of places and things that you want to explore and do respectively like Kayaking in Phuket is always a fun thing to do.</p>
-        </div>
+      <div class=" alert alert-secondary mt-4">
+        <center><h2 class="text-dark">About Us</h2></center>
+        <h5 class="text-dark"> 
+          <p class="m-3 pl-5">The safety and security of our guests is our top priority. Our excellent record of safe operation throughout Carnival's 40-plus year history, and the comprehensive safety standards we continue to live up to every day, proves that commitment.
+            All our officers and crew undergo comprehensive regular safety and emergency training that meets or exceeds all regulatory requirements.
+            Our crew members undergo specific training to handle emergency situations and help our guests. Crew roles, responsibilities and duties are clearly defined and assigned to handle any emergency on board.
+            The average sea farer experience of our captains is 32.6 years (23.6 years with our Cruise Line and nine years prior to joining us)
+            All Cruise ships are designed and operated in compliance with strict requirements of international law, which ensure that they are able to remain safe under a variety of adverse conditions.
+            All of our ships are equipped with the most advanced navigation technology, and our officers are expertly trained in its use. As part of our comprehensive bridge team management system, we always have multiple people on the bridge watch.
+            Additionally, it is our normal procedure to conduct a mandatory lifeboat drill at the start of every voyage. The purpose of the drill is to ensure that guests know where to go and what to do in case of emergency. On Carnival Cruise Line's ships, the drill is normally conducted prior to sailing.
+            Our lifeboats are tested during regularly-scheduled drills to make certain that they are in proper working order. Lifeboats carry survival kits with food and water, first aid supplies, and signaling and communication devices. Additionally, we conduct a full scale lifeboat exercise every month, where we simulate emergency conditions and our technical teams practice all operational procedures. Our life boats are routinely inspected, tested and certified by a third-party organization.
+          We also ensure that the number of lifejackets, lifeboats and life rafts on each Carnival ship exceed the number required, based on the ship's maximum capacity for passengers and crew.</p>
+        </h5>
       </div>
     </div>
+    <!-- about end -->
 
-    <br>
-    <br>
-    <br>
-
-
+    <!-- customer feedback -->
     <div class="container-fluid">
-      <div class="row">
-        <div class="col-xl-6 col-lg-6 col-md-6" style="border:0px solid #ddd">
-          <br>
-          <br>
-          <h2>Full Moon Party – Dance Under The Moonlight</h2>
-          <p>Compared to Indian standards, Goan forts are very small in size.
-
-            Some are awesome in sheer size like the Ruins of the St. Augustine’s Tower, while others are marvelous pieces of architecture, such as the Gate of the Adil Shah’s Palace at Old Goa.There are quite a few old Portuguese forts dotted around Goa, most of them on the coast. Most of them are in reasonable state of preservation and are worth a visit if you have the time.
-
-            Goa has several imposing forts, though most of them lie in ruins today. One marvels at the massive effort which was involved when the huge laterite stones were lifted to the top of inaccessible hills, to erect the forts.
-
-          The Portuguese found the need to raise the fortresses at several strategic points facing the river mouths to defend their new acquisitions in the East. Of course, they also acquired forts built by the neighbouring chieftains, when the latter’s lands were annexed by the Conquistadores. However, once the defense priorities receded, the forts too were abandoned by the Portuguese.</his p>
+     <div class="alert alert-info" role="alert" align="center">
+      <h2>Reviews By Our Customers</h2>
+    </div>
+  </div>
+  <div class="container-fluid px-0 py-5 mx-auto">
+    <div class="row justify-content-center mx-0 mx-md-auto">
+      <div class="col-lg-10 col-md-11 px-1 px-sm-2">
+        <div class="card border-0 px-3">
+          <!-- top row -->
+          <div class="d-flex row py-5 px-5 bg-light">
+            <div class="green-tab p-2 px-3 mx-2">
+              <p class="sm-text mb-0">OVERALL RATING</p>
+              <h4>4.8</h4>
+            </div>
+            <div class="white-tab p-2 mx-2 text-muted">
+              <p class="sm-text mb-0">ALL REVIEWS</p>
+              <h4>124</h4>
+            </div>
+            <div class="white-tab p-2 mx-2">
+              <p class="sm-text mb-0 text-muted">POSITIVE REVIEWS</p>
+              <h4 class="green-text">93%</h4>
+            </div>
+            <div class="ml-md-auto p-2 mx-md-2 pt-4 pt-md-3"> <button class="btn btn-red px-4">WRITE A REVIEW</button> </div>
+            
+            <!-- Review by user -->
+            <div class="review p-5">
+              <div class="row d-flex">
+                <div class="profile-pic"><img src="https://i.imgur.com/Mcd6HIg.jpg" width="60px" height="60px"></div>
+                <div class="d-flex flex-column pl-3">
+                  <h4>Emily</h4>
+                  <p class="grey-text">30 min ago</p>
+                </div>
+              </div>
+              <div class="row pb-3">
+                <div class="fa fa-circle green-dot my-auto rating-dot"></div>
+                <div class="fa fa-circle green-dot my-auto rating-dot"></div>
+                <div class="fa fa-circle green-dot my-auto rating-dot"></div>
+                <div class="fa fa-circle green-dot my-auto rating-dot"></div>
+                <div class="fa fa-circle green-dot my-auto rating-dot"></div>
+                <div class="green-text">
+                  <h5 class="mb-0 pl-3">Excellent</h5>
+                </div>
+              </div>
+              <div class="row pb-3">
+                <p>This cruise give lots of facillities..</p>
+              </div>
+              <div class="row ml-1">
+                <div class="row bg-light via">
+                  <textarea placeholder="Add your review" rows="4" cols="50"></textarea>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="col-xl-6 col-lg-6 col-md-6" style="border:0px solid #ddd">
-          <img src="thai2.jpeg" alt="responsive webite" class="img-fluid" height="500" width="800" align="right">
-        </div>
-
       </div>
     </div>
+  </div>
+  <!-- custoer feedback end -->
 
-    <br>
+  <!-- address -->
+  <section class="contact-area bg-gray">
+    <div class="container">
+      <div class="row align-items-center justify-content-between">
+        <div class="col-12 col-lg-5">
+          <!-- Section Heading -->
+          <div class="section-heading">
+           <h3 class="text-center mt-4">Our Office Address</h3>
+         </div><br>
+         <p>
+          <center>(323) 238-0644<br>
+            Govt.Polytechnic Thane<br>
+            Near Bharat Gear, Mumbra
+          </center>
+        </p>
+      </div>
 
-
-
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-xl-6 col-lg-6 col-md-6" style="border:0px solid #ddd">
-          <img src="thai3.jpeg" alt="responsive webite" class="img-fluid" height="500" width="800">
-        </div>
-        <div class="col-xl-6 col-lg-6 col-md-6" style="border:0px solid #ddd">
-          <br>
-          <br>
-          <br>
-          <br>
-          <h2>Our Cruises to reach here</h2>
-          <p>Thailand has long been a backpacker destination, but discerning luxury travelers are also now realizing the allure of this beautiful country. With a mix of big city living, rugged mountain landscapes, tropical islands, and intriguing wildlife habitats, it’s no wonder Thailand is a beloved destination. Go to Thailand on one of our Asia cruises and you’ll arrive in style. Once there, our in-depth shore excursions will help you to experience the culture, whether you’re looking for local artisan crafts, traditional cuisine, historic temples, hiking escapades to remote villages, or sailing getaways.
-
-          Thailand cruises are typically part of Southeast Asia itineraries and the ports you’ll visit depends on from where your ship embarks. Our ships that sail to Thailand include our beautiful and fun-filled Celebrity Millennium and Celebrity Constellation.</p>
+      <div class="col-12 col-lg-6">
+        <!-- Google Maps -->
+        <div class="map-area mb-100">
+          <center><iframe width="560" height="300" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22236.40558254599!2d-118.25292394686001!3d34.057682914027104!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2c75ddc27da13%3A0xe22fdf6f254608f4!2z4Kay4Ka4IOCmj-CmnuCnjeCmnOCnh-CmsuCnh-CmuCwg4KaV4KeN4Kav4Ka-4Kay4Ka_4Kar4KeL4Kaw4KeN4Kao4Ka_4Kav4Ka84Ka-LCDgpq7gpr7gprDgp43gppXgpr_gpqgg4Kav4KeB4KaV4KeN4Kak4Kaw4Ka-4Ka34KeN4Kaf4KeN4Kaw!5e0!3m2!1sbn!2sbd!4v1532328708137" allowfullscreen=""></iframe></center>
         </div>
       </div>
     </div>
-    <br>
-    <br>
-    <div style="text-align:center">
-      <button type="submit" class="btn btn-primary" onclick='location.href="payment.html"'>Book Now</a></button>
-    </div><br>
+  </div>
+</section>
+<!-- address end -->
 
-    <!-- scroll to top -->
-    <button type="button" class="btn btn-floating btn-lg" id="btn-back-to-top" style="position: fixed; bottom: 20px; right: 20px; display: none; width: 50px; height: 50px;">
-      <!-- <i class="fas fa-arrow-up "></i> -->
-      <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-arrow-up-circle-fill" fill=primary viewBox="0 0 16 16">
-        <path d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z"/>
-      </svg>
-    </button>
-    <script type="text/javascript">
+<!-- scroll to top -->
+<button type="button" class="btn" id="btn-back-to-top" style="position: fixed; bottom: 20px; right: 20px; display: none; width: 50px; height: 50px;">
+  <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="" class="bi bi-arrow-up-circle-fill" fill=primary viewBox="0 0 16 16">
+    <path d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z"/>
+  </svg>
+</button>
+<script type="text/javascript">
         //Get the button
         let mybutton = document.getElementById("btn-back-to-top");
 
@@ -415,7 +532,7 @@ window.onclick = function(event) {
            mybutton.style.display = "none";
          }
        }
-
+       
         // When the user clicks on the button, scroll to the top of the document
         mybutton.addEventListener("click", backToTop);
         function backToTop() 
@@ -425,6 +542,7 @@ window.onclick = function(event) {
        }
      </script>
      <!-- scroll to top end -->
+
      <!-- footer -->
      <footer class="bg-dark text-center text-white">
       <!-- Grid container -->
@@ -478,7 +596,5 @@ window.onclick = function(event) {
       <!-- Copyright -->
     </footer>
     <!-- footer end -->
-
-
   </body>
   </html>

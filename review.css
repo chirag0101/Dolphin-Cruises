@@ -3,7 +3,7 @@ body {
 }
 
 .container-fluid {
-    background-image: linear-gradient(to right, #7B1FA2, #E91E63)
+    /*background-image: linear-gradient(to right, #7B1FA2, #E91E63)*/
 }
 
 .sm-text {
@@ -88,24 +88,4 @@ body {
 .via {
     border-radius: 20px;
     height: 28px
-}
-.login {
-	background-color:#599bb3;
-	border-radius:8px;
-	display:inline-block;
-	cursor:pointer;
-	color:#ffffff;
-	font-family:Arial;
-	font-size:20px;
-	font-weight:bold;
-	padding:2px 10px;
-    margin-right: 5px;
-	text-decoration:none;
-}
-.login:hover {
-	background-color:#c9e4eebe;;
-}
-.login:active {
-	position:relative;
-	top:1px;
 }
